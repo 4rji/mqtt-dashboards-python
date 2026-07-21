@@ -519,6 +519,8 @@ def main():
     args = p.parse_args()
 
     EMQX["ca"] = args.emqx_ca
+    HIVEMQ["host"] = args.local_host
+    EMQX["host"] = args.local_host
     LOCAL["host"] = args.local_host
 
     stop = threading.Event()
